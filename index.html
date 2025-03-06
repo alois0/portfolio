@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/button.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    </head>
+    <body>
+        <div class="container">
+            <aside class="sidebar">
+                <div style="text-align: center;">
+                    <img style="width:100%;" src="resources\avatar.webp" alt="Profile Picture">
+                    <h1>Alois Entleutner</h1>
+                    <p>Web Developer</p>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><button class="tabbutton" onclick="showSection('accueil')">Accueil</button></li>
+                        <li><button class="tabbutton" onclick="showSection('btssio')">BTS SIO</button></li>
+                        <li><button class="tabbutton" onclick="showSection('realisations')">Epreuve E5</button></li>
+                        <li><button class="tabbutton" onclick="showSection('projets')">Epreuve E6</button></li>
+                        <li><button class="tabbutton" onclick="showSection('veille')">Veille</button></li>
+                        <li><button class="tabbutton" onclick="showSection('contact')">Contact</button></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="content">
+                <section id="accueil">
+                    <h2>Profil</h2>
+                    <p>Je m’appelle Alois Yohann Entleutner, j’ai 21 ans.</p>
+                    <p>Je suis actuellement étudiant a Ensitech en première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SLAM (Solutions Logicielles et Application Métier). Je m'intéresse à l'informatique depuis mon plus jeune âge et ce cours m'a donné l'expérience nécessaire pour démarrer ma carrière.</p>
+                    <p></p>Ce portfolio sert à montrer les différents projets sur lesquels j'ai travaillé au cours des deux dernières années ainsi qu'à expliquer le cours lui-même.
+                
+                    <h2>Compétences</h2>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>PHP</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                </section>
+            
+                <section id="btssio" class="hidden">
+                    <h2>BTS SIO </h2>
+                    <p>Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
+                    <p>Le BTS SIO est un diplôme de niveau Bac+2 qui se prépare en deux ans après le Bac. Il est accessible à tous les bacheliers, mais il est recommandé d'avoir un bon niveau en mathématiques et en informatique. Le BTS SIO est un diplôme professionnalisant qui permet d'acquérir des compétences techniques et des compétences en gestion de projet.</p>
+                    <div >
+                        <div>
+                            <h3>SLAM</h3>
+                            <p>L'option SLAM (Solutions Logicielles et Applications Métiers) forme des développeurs d'applications informatiques. Les étudiants apprennent à concevoir des applications informatiques, à les développer et à les tester. Ils apprennent également à gérer des projets informatiques et à travailler en équipe.</p>
+                        </div>
+                        <div>
+                            <h3>SISR</h3>
+                            <p>L'option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) forme des administrateurs réseaux et systèmes. Les étudiants apprennent à installer, configurer et maintenir des équipements informatiques, à gérer des réseaux informatiques et à sécuriser des systèmes d'information.</p>
+                        </div>
+                    </div>
+                
+                </section>
+            
+                <section id="realisations" class="hidden">
+                    <h2>Realisations (E5)</h2>
+                    <div class="view-buttons">
+                        <button onclick="showView('viewLeger')">Projet Leger</button>
+                        <button onclick="showView('viewLourd')">Projet Lourd</button>
+                    </div>
+                    <div id="viewLeger" class="view">
+                        <h3>Projet Leger</h3>
+                        <p>Le projet léger est un projet de développement d'une application web en HTML, CSS et JavaScript. Il s'agit d'une application simple qui permet de gérer des tâches. L'application permet de créer, modifier et supprimer des tâches. Elle permet également de marquer des tâches comme terminées.</p>
+                    </div>
+                    <div id="viewLourd" class="view hidden">
+                        <h3>Projet Lourd</h3>
+                        <p>Le projet lourd est un projet de développement d'une application web en PHP et MySQL. Il s'agit d'une application de gestion de contacts. L'application permet de créer, modifier et supprimer des contacts. Elle permet également de rechercher des contacts par nom ou par prénom.</p>
+                    </div>
+                </section>
+
+                <section id="projets" class="hidden">
+                    <h2>Section 2</h2>
+                    <div class="view-buttons">
+                        <button onclick="showView('viewA')">Marché au puces (PHP)</button>
+                        <button onclick="showView('viewB')">Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</button>
+                        <button onclick="showView('viewC')">Jeu de Chance (Flutter, Dart, Piskel)</button>
+                        <button onclick="showView('viewD')">Application de tri d'images (C++)</button>
+                        <button onclick="showView('viewE')">Site Web météo (JS)</button>
+                        <button onclick="showView('viewF')">Site de vente de tickets (PHP Laravel) (Stage)</button>
+                        <button onclick="showView('viewG')">Calculette de Gain de Temps (JS React) (Stage)</button>
+                    </div>
+                    <div id="viewA" class="view">
+                        <h3>Marché au puces (PHP)</h3>
+                        <p>This is the content of View A in Section 2.</p>
+                    </div>
+                    <div id="viewB" class="view hidden">
+                        <h3>Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</h3>
+                        <p>This is the content of View B in Section 2.</p>
+                        <div class="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="resources/img1.jpg" alt="Image 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="resources/img2.jpg" alt="Image 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="resources/img3.jpg" alt="Image 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
+                            <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
+                        </div>
+                    </div>
+                    <div id="viewC" class="view hidden">
+                        <h3>Jeu de Chance (Flutter, Dart, Piskel)</h3>
+                        <p>This is the content of View C in Section 2.</p>
+                    </div>
+                    <div id="viewD" class="view hidden">
+                        <h3>Application de tri d'images (C++)</h3>
+                        <p>This is the content of View D in Section 2.</p>
+                    </div>
+                    <div id="viewE" class="view hidden">
+                        <h3>Site Web météo (JS)</h3>
+                        <p>This is the content of View E in Section 2.</p>
+                    </div>
+                    <div id="viewF" class="view hidden">
+                        <h3>Site de vente de tickets (PHP Laravel) (Stage)</h3>
+                        <p>This is the content of View F in Section 2.</p>
+                    </div>
+                    <div id="viewG" class="view hidden">
+                        <h3>Calculette de Gain de Temps (JS React) (Stage)</h3>
+                        <p>This is the content of View G in Section 2.</p>
+                    </div>
+
+                </section> 
+
+                <section id="veille" class="hidden">
+                    <h2>Section 1</h2>
+                    <p>This is the content of section 1.</p>
+                </section>
+            
+                
+            
+                <section id="contact" class="hidden">
+                    <h2>Section 3</h2>
+                    <p>This is the content of section 3.</p>
+                </section> 
+            </main>
+        </div>
+
+        <script src="js/carousel.js"></script>
+        <script src="js/section.js">
+            
+        </script>
+    </body>
+</html>

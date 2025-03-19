@@ -7,14 +7,23 @@
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/button.css">
         <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="css/headerbuttons.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
+        <link rel="stylesheet" href="css/background.css">
+        <link rel="stylesheet" href="css/modals.css">
     </head>
     <body>
+        <div style="position:fixed; width:fit-content">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+         </div>
+  
+  
         <div class="container">
-            <aside class="sidebar">
+            <aside class="sidebar" id="sidebar">
                 <div style="text-align: center;">
-                    <img style="width:100%;" src="resources\avatar.webp" alt="Profile Picture">
+                    <img style="width:100%;border-radius:10px" src="resources\avatar.webp" alt="Profile Picture">
                     <h1>Alois Entleutner</h1>
                     <p>Web Developer</p>
                 </div>
@@ -30,7 +39,11 @@
                     </ul>
                 </nav>
             </aside>
+
+            <button class="toggle-sidebar" id="toggleSidebar">☰</button>
+
             <main class="content">
+
                 <section id="accueil">
                     <h2>Profil</h2>
                     <p>Je m’appelle Alois Yohann Entleutner, j’ai 21 ans.</p>
@@ -68,36 +81,141 @@
             
                 <section id="realisations" class="hidden">
                     <h2>Realisations (E5)</h2>
-                    <div class="view-buttons">
-                        <button onclick="showView('viewLeger')">Projet Leger</button>
-                        <button onclick="showView('viewLourd')">Projet Lourd</button>
+                    <div class="sticky-buttons-container bpad">
+                        <button onclick="showModal('pl')" class="bb brn" >Client Lèger</button>
+                        <button onclick="showModal('pj')" class="br bb">Client Lourd</button>
                     </div>
-                    <div id="viewLeger" class="view">
-                        <h3>Projet Leger</h3>
-                        <p>Le projet léger est un projet de développement d'une application web en HTML, CSS et JavaScript. Il s'agit d'une application simple qui permet de gérer des tâches. L'application permet de créer, modifier et supprimer des tâches. Elle permet également de marquer des tâches comme terminées.</p>
+
+                    <div id="pl" class="modal" onclick="outsideClick(event, 'pl')" oncontextmenu="rightClickClose(event, 'pl')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('pl')">&times;</span>
+
+                            <h3>Projet Leger</h3>
+                            <p>Le projet léger est un projet de développement d'une application web en HTML, CSS et JavaScript. Il s'agit d'une application simple qui permet de gérer des tâches. L'application permet de créer, modifier et supprimer des tâches. Elle permet également de marquer des tâches comme terminées.</p>
+                        </div>
                     </div>
-                    <div id="viewLourd" class="view hidden">
-                        <h3>Projet Lourd</h3>
-                        <p>Le projet lourd est un projet de développement d'une application web en PHP et MySQL. Il s'agit d'une application de gestion de contacts. L'application permet de créer, modifier et supprimer des contacts. Elle permet également de rechercher des contacts par nom ou par prénom.</p>
+
+                    <div id="pj" class="modal" onclick="outsideClick(event, 'pj')" oncontextmenu="rightClickClose(event, 'pj')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('pj')">&times;</span>
+
+                            <h3>Projet Lourd</h3>
+                            <p>Le projet lourd est un projet de développement d'une application web en Java et MySQL. Il s'agit d'une application de gestion de contacts. L'application permet de créer, modifier et supprimer des contacts. Elle permet également de rechercher des contacts par nom ou par prénom.</p>
+                        </div>
                     </div>
                 </section>
 
                 <section id="projets" class="hidden">
-                    <h2>Section 2</h2>
-                    <div class="view-buttons">
-                        <button onclick="showView('viewA')">Marché au puces (PHP)</button>
-                        <button onclick="showView('viewB')">Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</button>
-                        <button onclick="showView('viewC')">Jeu de Chance (Flutter, Dart, Piskel)</button>
-                        <button onclick="showView('viewD')">Application de tri d'images (C++)</button>
-                        <button onclick="showView('viewE')">Site Web météo (JS)</button>
-                        <button onclick="showView('viewF')">Site de vente de tickets (PHP Laravel) (Stage)</button>
-                        <button onclick="showView('viewG')">Calculette de Gain de Temps (JS React) (Stage)</button>
+                    
+                    <div class="sticky-buttons-container">
+                        <button onclick="showModal('modal1')" class="brn bbn" style="border-top-left-radius: 10px; background-image: url('resources/tn_agora.png');">Marché au puces (PHP)</button>
+                        <button onclick="showModal('modal2')" class="br bbn" style="border-top-right-radius: 10px;">Jeu de Chance (Flutter, Dart, Piskel)</button>
                     </div>
-                    <div id="viewA" class="view">
-                        <h3>Marché au puces (PHP)</h3>
-                        <p>This is the content of View A in Section 2.</p>
+                    <div class="sticky-buttons-container">
+                        <button onclick="showModal('modal3')" class="br bbn">Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</button>
                     </div>
-                    <div id="viewB" class="view hidden">
+                    <div class="sticky-buttons-container">
+                        <button onclick="showModal('modal4')" class="brn bbn">Application de tri d'images (C++)</button>
+                        <button onclick="showModal('modal5')" class="br bbn">Site Web météo (JS)</button>
+                    </div>
+                    <div class="sticky-buttons-container">
+                        <button onclick="showModal('modal6')" class="bb brn" style="border-bottom-left-radius: 10px;"><p>Site de vente de tickets (PHP Laravel)</p><p>(Stage)</p></button>
+                        <button onclick="showModal('modal7')" class="bb br" style="border-bottom-right-radius: 10px;"><p>Calculette de Gain de Temps (JS React)</p><p>(Stage)</p></button>
+                    </div>
+                    
+
+
+                    <div id="modal1" class="modal" onclick="outsideClick(event, 'modal1')" oncontextmenu="rightClickClose(event, 'modal1')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+
+                            <h2>Modal 1</h2>
+                            <p>This is the first modal.</p>
+
+                            <p>Slideshow 1:</p>
+                            <div class="slideshow-container">
+                                <div class="mySlides1">
+                                    <img src="resources/img1.png" style="width:100%">
+                                </div>
+
+                                <div class="mySlides1">
+                                    <img src="resources/img2.jpg" style="width:100%">
+                                </div>
+
+                                <div class="mySlides1">
+                                    <img src="resources/cartographer.png" style="width:100%">
+                                </div>
+
+                                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                    <div id="modal2" class="modal" onclick="outsideClick(event, 'modal2')" oncontextmenu="rightClickClose(event, 'modal2')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+
+                            <h2>Modal 2</h2>
+                            <p>This is the second modal.</p>
+
+                        </div>
+                    </div>
+
+                    <div id="modal3" class="modal" onclick="outsideClick(event, 'modal3')" oncontextmenu="rightClickClose(event, 'modal3')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+
+                            <h2>Modal 3</h2>
+                            <p>This is the third modal.</p>
+
+                        </div>
+                    </div>
+
+                    <div id="modal4" class="modal" onclick="outsideClick(event, 'modal4')" oncontextmenu="rightClickClose(event, 'modal4')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+
+                            <h2>Modal 4</h2>
+                            <p>This is the fourth modal.</p>
+
+                        </div>      
+                    </div>
+
+                    <div id="modal5" class="modal" onclick="outsideClick(event, 'modal5')" oncontextmenu="rightClickClose(event, 'modal5')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal5')">&times;</span>
+
+                            <h2>Modal 5</h2>
+                            <p>This is the fifth modal.</p>
+
+                        </div>
+                    </div>
+
+                    <div id="modal6" class="modal" onclick="outsideClick(event, 'modal6')" oncontextmenu="rightClickClose(event, 'modal6')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal6')">&times;</span>
+
+                            <h2>Modal 6</h2>
+                            <p>This is the sixth modal.</p>
+
+                        </div>
+                    </div>
+
+                    <div id="modal7" class="modal" onclick="outsideClick(event, 'modal7')" oncontextmenu="rightClickClose(event, 'modal7')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal7')">&times;</span>
+
+                            <h2>Modal 7</h2>
+                            <p>This is the seventh modal.</p>
+
+                        </div>
+                    </div>
+                
+
+                    <div id="viewB" class="view hidden" style="height: 1000px;">
+                        
                         <h3>Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</h3>
                         <p>This is the content of View B in Section 2.</p>
                         <div class="carousel">
@@ -150,12 +268,14 @@
                     <h2>Section 3</h2>
                     <p>This is the content of section 3.</p>
                 </section> 
+                
             </main>
         </div>
 
+        
+        <script src="js/sidebar.js"></script>
         <script src="js/carousel.js"></script>
-        <script src="js/section.js">
-            
-        </script>
+        <script src="js/section.js"></script>
+        <script src="js/modals.js"></script>
     </body>
 </html>

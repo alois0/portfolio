@@ -1,0 +1,51 @@
+.sticky-buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    position: -webkit-sticky; /* For Safari */
+}
+
+.sticky-buttons-container button {
+    background-color: #f1f1f1;
+    border-top: 0.2px solid #000000;
+    border-left: 0.2px solid #000000;
+    border-radius: 1px;
+    padding: 10px;
+    text-align: center;
+    transition-duration: 2.5s;
+    min-height: 100px;
+    width: 100%;
+
+    font-size: 17px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.bb {
+    border-bottom: 0.2px solid #000000;
+}
+.br {
+    border-right: 0.2px solid #000000;
+}
+.bbn {
+    border-bottom: none;
+}
+.brn {
+    border-right: none;
+}
+.bpad button{
+    padding: 50px;
+    width: 200px;
+}
+
+.sticky-buttons-container button:hover {
+    background-color: #bbbbbb;
+    transition-duration: .5s;
+
+    font-size: 18px;
+}
+
+.sticky-buttons-container button:active {
+    background-color: #6c6fca;
+    transition-duration: .1s;
+}

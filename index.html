@@ -45,85 +45,69 @@
             <main class="content">
 
                 <section id="accueil">
-                    <h2>Profil</h2>
-                    <p>Je m’appelle Alois Yohann Entleutner, j’ai 21 ans.</p>
-                    <p>Je suis actuellement étudiant a Ensitech en première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SLAM (Solutions Logicielles et Application Métier). Je m'intéresse à l'informatique depuis mon plus jeune âge et ce cours m'a donné l'expérience nécessaire pour démarrer ma carrière.</p>
-                    <p></p>Ce portfolio sert à montrer les différents projets sur lesquels j'ai travaillé au cours des deux dernières années ainsi qu'à expliquer le cours lui-même.
-                
-                    <h2>Compétences</h2>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>React</li>
-                        <li>PHP</li>
-                        <li>SQL</li>
-                        <li>Java</li>
-                        <li>Python</li>
+                    <div class="box">
+                        <h2>Profil</h2>
+                        <p>Je m’appelle Alois Yohann Entleutner, j’ai 21 ans.</p>
+                        <p style="max-width: 900px;text-align:center;">Je suis actuellement étudiant a Ensitech en première année de BTS SIO (Services Informatiques aux Organisations) dans l'option SLAM (Solutions Logicielles et Application Métier). Je m'intéresse à l'informatique depuis mon plus jeune âge et ce cours m'a donné l'expérience nécessaire pour démarrer ma carrière.</p>
+                        <p>Ce portfolio sert à montrer les différents projets sur lesquels j'ai travaillé au cours des deux dernières années ainsi qu'à expliquer le cours lui-même.</p>
+                        <p></p>
+
+                        <button onclick="showModal('CVModal')" class="tabbutton" style="color: black; width: 200px; z-index:0; --color: #9d9d9daf;">CV</button>
+                        <p></p>
+                        <button onclick="showModal('TableauModal')" class="tabbutton" style="color: black; width: 200px; z-index:0; --color: #9d9d9daf;">Tableau des Synthèses</button>
+
+                        <div id="CVModal" class="modal" onclick="outsideClick(event, 'CVModal')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('CVModal')">&times;</span>
+                                <iframe src="documents/CV_AloisEntleutner_ENSITECH_BTS SIO SLAM_SQY (2).pdf" width="100%" height="100%" style="border: none;"></iframe>
+                            </div>
+                        </div>
+
+                        <div id="TableauModal" class="modal" onclick="outsideClick(event, 'TableauModal')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('TableauModal')">&times;</span>
+                                <iframe src="documents/Tableau_de_Compétences_Alois_Entleutner.pdf" width="100%" height="100%" style="border: none;"></iframe>
+                            </div>
+                        </div>
+
+                        <h2>Compétences</h2>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>Java</li>
+                            <li>Python</li>
+                    </div>
+                    
                 </section>
             
                 <section id="btssio" class="hidden">
-                    <h2>BTS SIO </h2>
-                    <p>Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
-                    <p>Le BTS SIO est un diplôme de niveau Bac+2 qui se prépare en deux ans après le Bac. Il est accessible à tous les bacheliers, mais il est recommandé d'avoir un bon niveau en mathématiques et en informatique. Le BTS SIO est un diplôme professionnalisant qui permet d'acquérir des compétences techniques et des compétences en gestion de projet.</p>
-                    <div >
-                        <div>
-                            <h3>SLAM</h3>
-                            <p>L'option SLAM (Solutions Logicielles et Applications Métiers) forme des développeurs d'applications informatiques. Les étudiants apprennent à concevoir des applications informatiques, à les développer et à les tester. Ils apprennent également à gérer des projets informatiques et à travailler en équipe.</p>
-                        </div>
-                        <div>
-                            <h3>SISR</h3>
-                            <p>L'option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) forme des administrateurs réseaux et systèmes. Les étudiants apprennent à installer, configurer et maintenir des équipements informatiques, à gérer des réseaux informatiques et à sécuriser des systèmes d'information.</p>
-                        </div>
-                    </div>
-                
-                </section>
-            
-                <section id="realisations" class="hidden">
-                    <h2>Realisations (E5)</h2>
-                    <div class="sticky-buttons-container bpad">
-                        <button onclick="showModal('pl')" class="bb brn" >Client Lèger</button>
-                        <button onclick="showModal('pj')" class="br bb">Client Lourd</button>
-                    </div>
-
-                    <div id="pl" class="modal" onclick="outsideClick(event, 'pl')" oncontextmenu="rightClickClose(event, 'pl')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('pl')">&times;</span>
-
-                            <h3>Projet Leger</h3>
-                            <p>Le projet léger est un projet de développement d'une application web en HTML, CSS et JavaScript. Il s'agit d'une application simple qui permet de gérer des tâches. L'application permet de créer, modifier et supprimer des tâches. Elle permet également de marquer des tâches comme terminées.</p>
-                        </div>
-                    </div>
-
-                    <div id="pj" class="modal" onclick="outsideClick(event, 'pj')" oncontextmenu="rightClickClose(event, 'pj')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('pj')">&times;</span>
-
-                            <h3>Projet Lourd</h3>
-                            <p>Le projet lourd est un projet de développement d'une application web en Java et MySQL. Il s'agit d'une application de gestion de contacts. L'application permet de créer, modifier et supprimer des contacts. Elle permet également de rechercher des contacts par nom ou par prénom.</p>
+                    <div class="box">
+                        <h2>BTS SIO </h2>
+                        <p>Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
+                        <p>Le BTS SIO est un diplôme de niveau Bac+2 qui se prépare en deux ans après le Bac. Il est accessible à tous les bacheliers, mais il est recommandé d'avoir un bon niveau en mathématiques et en informatique. Le BTS SIO est un diplôme professionnalisant qui permet d'acquérir des compétences techniques et des compétences en gestion de projet.</p>
+                        <div >
+                            <div>
+                                <h3>SLAM</h3>
+                                <p>L'option SLAM (Solutions Logicielles et Applications Métiers) forme des développeurs d'applications informatiques. Les étudiants apprennent à concevoir des applications informatiques, à les développer et à les tester. Ils apprennent également à gérer des projets informatiques et à travailler en équipe.</p>
+                            </div>
+                            <div>
+                                <h3>SISR</h3>
+                                <p>L'option SISR (Solutions d'Infrastructure, Systèmes et Réseaux) forme des administrateurs réseaux et systèmes. Les étudiants apprennent à installer, configurer et maintenir des équipements informatiques, à gérer des réseaux informatiques et à sécuriser des systèmes d'information.</p>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section id="projets" class="hidden">
-                    
-                    <div class="sticky-buttons-container">
-                        <button onclick="showModal('modal1')" class="brn bbn" style="border-top-left-radius: 10px; background-image: url('resources/tn_agora.png');">Marché au puces (PHP)</button>
-                        <button onclick="showModal('modal2')" class="br bbn" style="border-top-right-radius: 10px;">Jeu de Chance (Flutter, Dart, Piskel)</button>
-                    </div>
-                    <div class="sticky-buttons-container">
-                        <button onclick="showModal('modal3')" class="br bbn">Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</button>
-                    </div>
-                    <div class="sticky-buttons-container">
-                        <button onclick="showModal('modal4')" class="brn bbn">Application de tri d'images (C++)</button>
-                        <button onclick="showModal('modal5')" class="br bbn">Site Web météo (JS)</button>
-                    </div>
-                    <div class="sticky-buttons-container">
-                        <button onclick="showModal('modal6')" class="bb brn" style="border-bottom-left-radius: 10px;"><p>Site de vente de tickets (PHP Laravel)</p><p>(Stage)</p></button>
-                        <button onclick="showModal('modal7')" class="bb br" style="border-bottom-right-radius: 10px;"><p>Calculette de Gain de Temps (JS React)</p><p>(Stage)</p></button>
-                    </div>
-                    
-
+                <section id="realisations" class='hidden' style="background-color: none;">
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/tn_agora.png" alt="Logo Agora">
+                        <h2>Marché de Puces</h2>
+                        
+                    </button>
 
                     <div id="modal1" class="modal" onclick="outsideClick(event, 'modal1')" oncontextmenu="rightClickClose(event, 'modal1')">
                         <div class="modal-content">
@@ -152,121 +136,254 @@
 
                         </div>
                     </div>
-                
-                    <div id="modal2" class="modal" onclick="outsideClick(event, 'modal2')" oncontextmenu="rightClickClose(event, 'modal2')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal2')">&times;</span>
 
-                            <h2>Modal 2</h2>
-                            <p>This is the second modal.</p>
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/tn_agora.png" alt="Logo Agora">
+                        <h2>Jeu de Chance</h2>
+                        <h3>(Flutter, Dart, Piskel)</h3>
+                    </button>
+
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/tn_agora.png" alt="Logo Agora">
+                        <h2>Jeu avec des niveaux générés de manière procédurale</h2>
+                        <h3>(Pygame, Piskel)</h3>
+                    </button>
+
+                    <button class="box real" onclick="showModal('modalPortfolio')">
+                        <img src="resources/portfolio.png" alt="portfolio">
+                        <h2>Portfolio</h2>
+                        <h3>HTML, CSS, JS</h3>
+                    </button>
+
+                    <div id="modalPortfolio" class="modal" onclick="outsideClick(event, 'modalPortfolio')" oncontextmenu="rightClickClose(event, 'modalPortfolio')">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modalPortfolio')">&times;</span>
 
                         </div>
                     </div>
 
-                    <div id="modal3" class="modal" onclick="outsideClick(event, 'modal3')" oncontextmenu="rightClickClose(event, 'modal3')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal3')">&times;</span>
-
-                            <h2>Modal 3</h2>
-                            <p>This is the third modal.</p>
-
-                        </div>
+                    <div class="box real">
+                        <h2>Realisations</h2>
+                        <p>Voici quelques réalisations que j'ai faites au cours de ma formation. Ces projets montrent mes compétences en développement web, en programmation et en gestion de projet.</p>
                     </div>
 
-                    <div id="modal4" class="modal" onclick="outsideClick(event, 'modal4')" oncontextmenu="rightClickClose(event, 'modal4')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/extension.png" alt="Extension Firefox">
+                        <h2>Extension Firefox pour la lisibilité</h2>
+                    </button>
 
-                            <h2>Modal 4</h2>
-                            <p>This is the fourth modal.</p>
-
-                        </div>      
-                    </div>
-
-                    <div id="modal5" class="modal" onclick="outsideClick(event, 'modal5')" oncontextmenu="rightClickClose(event, 'modal5')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal5')">&times;</span>
-
-                            <h2>Modal 5</h2>
-                            <p>This is the fifth modal.</p>
-
-                        </div>
-                    </div>
-
-                    <div id="modal6" class="modal" onclick="outsideClick(event, 'modal6')" oncontextmenu="rightClickClose(event, 'modal6')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal6')">&times;</span>
-
-                            <h2>Modal 6</h2>
-                            <p>This is the sixth modal.</p>
-
-                        </div>
-                    </div>
-
-                    <div id="modal7" class="modal" onclick="outsideClick(event, 'modal7')" oncontextmenu="rightClickClose(event, 'modal7')">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal('modal7')">&times;</span>
-
-                            <h2>Modal 7</h2>
-                            <p>This is the seventh modal.</p>
-
-                        </div>
-                    </div>
-                
-
-                    <div id="viewB" class="view hidden" style="height: 1000px;">
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/tn_agora.png" alt="Logo Agora">
+                        <h2>Site de vente de tickets (PHP Laravel)</h2>
                         
-                        <h3>Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</h3>
-                        <p>This is the content of View B in Section 2.</p>
-                        <div class="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="resources/img1.jpg" alt="Image 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resources/img2.jpg" alt="Image 2">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="resources/img3.jpg" alt="Image 3">
-                                </div>
-                            </div>
-                            <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
-                            <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
-                        </div>
-                    </div>
-                    <div id="viewC" class="view hidden">
-                        <h3>Jeu de Chance (Flutter, Dart, Piskel)</h3>
-                        <p>This is the content of View C in Section 2.</p>
-                    </div>
-                    <div id="viewD" class="view hidden">
-                        <h3>Application de tri d'images (C++)</h3>
-                        <p>This is the content of View D in Section 2.</p>
-                    </div>
-                    <div id="viewE" class="view hidden">
-                        <h3>Site Web météo (JS)</h3>
-                        <p>This is the content of View E in Section 2.</p>
-                    </div>
-                    <div id="viewF" class="view hidden">
-                        <h3>Site de vente de tickets (PHP Laravel) (Stage)</h3>
-                        <p>This is the content of View F in Section 2.</p>
-                    </div>
-                    <div id="viewG" class="view hidden">
-                        <h3>Calculette de Gain de Temps (JS React) (Stage)</h3>
-                        <p>This is the content of View G in Section 2.</p>
-                    </div>
+                    </button>
 
+                    <button class="box real" onclick="showModal('modal1')">
+                        <img src="resources/tn_agora.png" alt="Logo Agora">
+                        <h2>Calculette de Gain de Temps (JS React)</h2>
+                    </button>
+                </section>
+            
+                <section class="hidden">
+                    <div class="box">
+                        <h2>Réalisations (E5)</h2>
+                        <div>
+                            <div class="sticky-buttons-container">
+                                <button onclick="showModal('modal1')" class="brn bbn" style="border-top-left-radius: 10px; background-image: url('resources/tn_agora.png');">Marché au puces (PHP)</button>
+                                <button onclick="showModal('modal2')" class="br bbn" style="border-top-right-radius: 10px;">Jeu de Chance (Flutter, Dart, Piskel)</button>
+                            </div>
+                            <div class="sticky-buttons-container">
+                                <button onclick="showModal('modal3')" class="br bbn">Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</button>
+                            </div>
+                            <div class="sticky-buttons-container">
+                                <button onclick="showModal('modal4')" class="brn bbn">Application de tri d'images (C++)</button>
+                                <button onclick="showModal('modal5')" class="br bbn">Site Web météo (JS)</button>
+                            </div>
+                            <div class="sticky-buttons-container">
+                                <button onclick="showModal('modal6')" class="bb brn" style="border-bottom-left-radius: 10px;"><p>Site de vente de tickets (PHP Laravel)</p><p>(Stage)</p></button>
+                                <button onclick="showModal('modal7')" class="bb br" style="border-bottom-right-radius: 10px;"><p>Calculette de Gain de Temps (JS React)</p><p>(Stage)</p></button>
+                            </div>
+                        </div>
+                        
+                        
+
+
+                        <div id="modal1" class="modal" onclick="outsideClick(event, 'modal1')" oncontextmenu="rightClickClose(event, 'modal1')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal1')">&times;</span>
+
+                                <h2>Modal 1</h2>
+                                <p>This is the first modal.</p>
+
+                                <p>Slideshow 1:</p>
+                                <div class="slideshow-container">
+                                    <div class="mySlides1">
+                                        <img src="resources/img1.png" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides1">
+                                        <img src="resources/img2.jpg" style="width:100%">
+                                    </div>
+
+                                    <div class="mySlides1">
+                                        <img src="resources/cartographer.png" style="width:100%">
+                                    </div>
+
+                                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    
+                        <div id="modal2" class="modal" onclick="outsideClick(event, 'modal2')" oncontextmenu="rightClickClose(event, 'modal2')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal2')">&times;</span>
+
+                                <h2>Modal 2</h2>
+                                <p>This is the second modal.</p>
+
+                            </div>
+                        </div>
+
+                        <div id="modal3" class="modal" onclick="outsideClick(event, 'modal3')" oncontextmenu="rightClickClose(event, 'modal3')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal3')">&times;</span>
+
+                                <h2>Modal 3</h2>
+                                <p>This is the third modal.</p>
+
+                            </div>
+                        </div>
+
+                        <div id="modal4" class="modal" onclick="outsideClick(event, 'modal4')" oncontextmenu="rightClickClose(event, 'modal4')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal4')">&times;</span>
+
+                                <h2>Modal 4</h2>
+                                <p>This is the fourth modal.</p>
+
+                            </div>      
+                        </div>
+
+                        <div id="modal5" class="modal" onclick="outsideClick(event, 'modal5')" oncontextmenu="rightClickClose(event, 'modal5')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal5')">&times;</span>
+
+                                <h2>Modal 5</h2>
+                                <p>This is the fifth modal.</p>
+
+                            </div>
+                        </div>
+
+                        <div id="modal6" class="modal" onclick="outsideClick(event, 'modal6')" oncontextmenu="rightClickClose(event, 'modal6')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal6')">&times;</span>
+
+                                <h2>Modal 6</h2>
+                                <p>This is the sixth modal.</p>
+
+                            </div>
+                        </div>
+
+                        <div id="modal7" class="modal" onclick="outsideClick(event, 'modal7')" oncontextmenu="rightClickClose(event, 'modal7')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('modal7')">&times;</span>
+
+                                <h2>Modal 7</h2>
+                                <p>This is the seventh modal.</p>
+
+                            </div>
+                        </div>
+                    
+
+                        <div id="viewB" class="view hidden" style="height: 1000px;">
+                            
+                            <h3>Jeu avec des niveaux générés de manière procédurale (Pygame, Piskel)</h3>
+                            <p>This is the content of View B in Section 2.</p>
+                            <div class="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="resources/img1.jpg" alt="Image 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resources/img2.jpg" alt="Image 2">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resources/img3.jpg" alt="Image 3">
+                                    </div>
+                                </div>
+                                <button class="carousel-control prev" onclick="changeSlide(-1)">&#10094;</button>
+                                <button class="carousel-control next" onclick="changeSlide(1)">&#10095;</button>
+                            </div>
+                        </div>
+                        <div id="viewC" class="view hidden">
+                            <h3>Jeu de Chance (Flutter, Dart, Piskel)</h3>
+                            <p>This is the content of View C in Section 2.</p>
+                        </div>
+                        <div id="viewD" class="view hidden">
+                            <h3>Application de tri d'images (C++)</h3>
+                            <p>This is the content of View D in Section 2.</p>
+                        </div>
+                        <div id="viewE" class="view hidden">
+                            <h3>Site Web météo (JS)</h3>
+                            <p>This is the content of View E in Section 2.</p>
+                        </div>
+                        <div id="viewF" class="view hidden">
+                            <h3>Site de vente de tickets (PHP Laravel) (Stage)</h3>
+                            <p>This is the content of View F in Section 2.</p>
+                        </div>
+                        <div id="viewG" class="view hidden">
+                            <h3>Calculette de Gain de Temps (JS React) (Stage)</h3>
+                            <p>This is the content of View G in Section 2.</p>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </section>
+
+                <section id="projets" class="hidden">
+                    <div class="box">
+                        <h2>Projets (E6)</h2>
+                        <div class="sticky-buttons-container bpad">
+                            <button onclick="showModal('pl')" class="bb brn" >Client Lèger</button>
+                            <button onclick="showModal('pj')" class="br bb">Client Lourd</button>
+                        </div>
+
+                        <div id="pl" class="modal" onclick="outsideClick(event, 'pl')" oncontextmenu="rightClickClose(event, 'pl')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('pl')">&times;</span>
+
+                                <h3>Projet Leger</h3>
+                                <p>Le projet léger est un projet de développement d'une application web en HTML, CSS et JavaScript. Il s'agit d'une application simple qui permet de gérer des tâches. L'application permet de créer, modifier et supprimer des tâches. Elle permet également de marquer des tâches comme terminées.</p>
+                            </div>
+                        </div>
+
+                        <div id="pj" class="modal" onclick="outsideClick(event, 'pj')" oncontextmenu="rightClickClose(event, 'pj')">
+                            <div class="modal-content">
+                                <span class="close" onclick="closeModal('pj')">&times;</span>
+
+                                <h3>Projet Lourd</h3>
+                                <p>Le projet lourd est un projet de développement d'une application web en Java et MySQL. Il s'agit d'une application de gestion de contacts. L'application permet de créer, modifier et supprimer des contacts. Elle permet également de rechercher des contacts par nom ou par prénom.</p>
+                            </div>
+                        </div>
+                    
+                    </div>
                 </section> 
 
                 <section id="veille" class="hidden">
-                    <h2>Section 1</h2>
-                    <p>This is the content of section 1.</p>
+                    <div class="box">
+                        <h2>Veille Technologique</h2>
+                        <p>La veille technologique est un processus de collecte, d'analyse et de diffusion d'informations sur les nouvelles technologies et les tendances du marché. Elle permet aux entreprises de rester informées des évolutions technologiques et de s'adapter aux changements du marché.</p>
+                        <p>La veille technologique peut être réalisée de différentes manières, notamment par la lecture d'articles, la participation à des conférences, la surveillance des réseaux sociaux et l'analyse des brevets.</p>
+                    </div>
                 </section>
             
-                
-            
                 <section id="contact" class="hidden">
-                    <h2>Section 3</h2>
-                    <p>This is the content of section 3.</p>
+                    <div class="box">
+                        <h1>Contacte</h1>
+                    </div>    
                 </section> 
                 
             </main>

@@ -1,4 +1,3 @@
-
 /* From Uiverse.io by nikk7007 */ 
 .tabbutton {
     width: 100%;
@@ -17,9 +16,9 @@
     text-transform: uppercase;
     color: var(--color);
     z-index: 1;
-   }
-   
-   .tabbutton::before, .tabbutton::after {
+}
+
+.tabbutton::before, .tabbutton::after {
     content: '';
     display: block;
     width: 50px;
@@ -30,28 +29,27 @@
     z-index: -1;
     background-color: var(--color);
     transition: 1s ease;
-   }
-   
-   .tabbutton::before {
+}
+
+.tabbutton::before {
     top: -1em;
     left: -1em;
-   }
-   
-   .tabbutton::after {
+}
+
+.tabbutton::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
-   }
-   
-   .tabbutton:hover::before, .tabbutton:hover::after {
+}
+
+.tabbutton:hover::before, .tabbutton:hover::after {
     height: 410px;
     width: 410px;
-   }
-   
-   .tabbutton:hover {
+}
+
+.tabbutton:hover {
     color: rgb(10, 25, 30);
-   }
-   
-   .tabbutton:active {
+}
+
+.tabbutton:active {
     filter: brightness(.8);
-   }
-   
+}

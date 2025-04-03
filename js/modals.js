@@ -1,6 +1,6 @@
 function showModal(id) {
     const modal = document.getElementById(id);
-    modal.style.display = 'block'; // Show the modal
+    modal.style.display = 'block';
 }
 
 function closeModal(id) {
@@ -13,18 +13,18 @@ function closeModal(id) {
 }
 
 function outsideClick(event, id) {
-    if (event.target.id === id) { // Only close if clicking outside modal-content
+    if (event.target.id === id) { 
         closeModal(id);
     }
 }
 
 // function rightClickClose(event, id) {
-//     event.preventDefault(); // Prevent the default right-click menu
+//     event.preventDefault();
 //     closeModal(id);
 // }
 
 function closeOnEscape(event, id) {
-    if (event.keyCode === 27) { // 27 is the escape key
+    if (event.keyCode === 27) { 
         closeModal(id);
     }
 }

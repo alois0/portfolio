@@ -70,10 +70,20 @@ section {
         box-sizing: border-box;
         transition-duration: 1s;
         font-weight: 100;
+        img {
+            max-width: 100%; /* Ensures the image does not exceed the width of its container */
+            max-height: 200px; /* Sets a maximum height for the image */
+            object-fit: contain; /* Maintains the aspect ratio of the image */
+            width: auto; /* Ensures the width adjusts automatically */
+            height: auto; /* Ensures the height adjusts automatically */
+            display: block; /* Removes inline spacing for images inside containers */
+            margin: 0 auto; /* Centers the image horizontally if needed */
+        };
     }
     .real:hover {
         transform: scale(1.05);
         transition-duration: .5s;
+        cursor: pointer;
     }
     button {
         img {

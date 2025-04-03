@@ -8,7 +8,7 @@
     background: rgba(0,0,0,0.5); 
     animation: fadeIn 0.5s ease-in-out;
     z-index: 1000;
-    
+
 }
         
 .modal-content { 
@@ -17,11 +17,23 @@
     margin: 3% auto; 
     width: 60%; 
     height: 90%;
-    overflow-y: auto;
+    overflow-y: hidden;
     border-radius: 10px;
+    align-content: center;
 
     /* transform: translateY(-50px); */
     animation: slideDown 0.3s ease-in-out;
+}
+.modal-content a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.modal-content a:hover {
+    color: #2c8bf1;
 }
         
 .close { 
@@ -42,9 +54,9 @@
 }
 
 /* Optional: Fade-out animation for closing */
-.modal.fade-out {
+/* .modal.fade-out {
     animation: fadeOut 0.3s ease-out;
-}
+} */
 
 @keyframes fadeOut {
     from {
